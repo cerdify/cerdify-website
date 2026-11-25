@@ -1,0 +1,576 @@
+{
+ "results": [
+  {
+   "path": "/",
+   "mobile": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "mobileFailed": [
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0)",
+    "document-latency-insight(0.5)",
+    "network-dependency-tree-insight(0)"
+   ],
+   "desktop": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "desktopFailed": [
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0)",
+    "document-latency-insight(0.5)",
+    "network-dependency-tree-insight(0)"
+   ]
+  },
+  {
+   "path": "/for-bookkeepers",
+   "mobile": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "mobileFailed": [
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "unused-css-rules(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0)",
+    "document-latency-insight(0.5)",
+    "network-dependency-tree-insight(0)"
+   ],
+   "desktop": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "desktopFailed": [
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "unused-css-rules(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0)",
+    "document-latency-insight(0.5)",
+    "network-dependency-tree-insight(0)"
+   ]
+  },
+  {
+   "path": "/for-controllers",
+   "mobile": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "mobileFailed": [
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "unused-css-rules(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0)",
+    "document-latency-insight(0.5)"
+   ],
+   "desktop": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "desktopFailed": [
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "unused-css-rules(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0.5)",
+    "document-latency-insight(0.5)"
+   ]
+  },
+  {
+   "path": "/how-it-works",
+   "mobile": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "mobileFailed": [
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "unused-css-rules(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0)",
+    "document-latency-insight(0.5)",
+    "network-dependency-tree-insight(0)"
+   ],
+   "desktop": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "desktopFailed": [
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "unused-css-rules(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0)",
+    "document-latency-insight(0.5)",
+    "network-dependency-tree-insight(0)"
+   ]
+  },
+  {
+   "path": "/privacy",
+   "mobile": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "mobileFailed": [
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "unused-css-rules(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0)",
+    "document-latency-insight(0.5)"
+   ],
+   "desktop": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "desktopFailed": [
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "unused-css-rules(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0.5)",
+    "document-latency-insight(0.5)"
+   ]
+  },
+  {
+   "path": "/quickbooks-online",
+   "mobile": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "mobileFailed": [
+    "max-potential-fid(0.97)",
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "unused-css-rules(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0)",
+    "document-latency-insight(0.5)"
+   ],
+   "desktop": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "desktopFailed": [
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "unused-css-rules(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0.5)",
+    "document-latency-insight(0.5)"
+   ]
+  },
+  {
+   "path": "/resources/",
+   "mobile": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "mobileFailed": [
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "unused-css-rules(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0)",
+    "document-latency-insight(0.5)"
+   ],
+   "desktop": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "desktopFailed": [
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "unused-css-rules(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0.5)",
+    "document-latency-insight(0.5)"
+   ]
+  },
+  {
+   "path": "/resources/audit-ready-books",
+   "mobile": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "mobileFailed": [
+    "max-potential-fid(0.95)",
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "unused-css-rules(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0)",
+    "document-latency-insight(0.5)"
+   ],
+   "desktop": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "desktopFailed": [
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "unused-css-rules(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0.5)",
+    "document-latency-insight(0.5)"
+   ]
+  },
+  {
+   "path": "/resources/month-end-close-checklist",
+   "mobile": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "mobileFailed": [
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "unused-css-rules(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0)",
+    "document-latency-insight(0.5)"
+   ],
+   "desktop": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "desktopFailed": [
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "unused-css-rules(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0.5)",
+    "document-latency-insight(0.5)"
+   ]
+  },
+  {
+   "path": "/resources/quickbooks-duplicate-transactions",
+   "mobile": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "mobileFailed": [
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "unused-css-rules(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0)",
+    "document-latency-insight(0.5)"
+   ],
+   "desktop": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "desktopFailed": [
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "unused-css-rules(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0.5)",
+    "document-latency-insight(0.5)"
+   ]
+  },
+  {
+   "path": "/resources/trial-balance-vs-general-ledger",
+   "mobile": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "mobileFailed": [
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "unused-css-rules(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0)",
+    "document-latency-insight(0.5)",
+    "network-dependency-tree-insight(0)"
+   ],
+   "desktop": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "desktopFailed": [
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "unused-css-rules(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0)",
+    "document-latency-insight(0.5)",
+    "network-dependency-tree-insight(0)"
+   ]
+  },
+  {
+   "path": "/security",
+   "mobile": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "mobileFailed": [
+    "max-potential-fid(0.98)",
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "unused-css-rules(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0)",
+    "document-latency-insight(0.5)"
+   ],
+   "desktop": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "desktopFailed": [
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "unused-css-rules(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0.5)",
+    "document-latency-insight(0.5)"
+   ]
+  },
+  {
+   "path": "/terms",
+   "mobile": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "mobileFailed": [
+    "max-potential-fid(0.94)",
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "unused-css-rules(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0)",
+    "document-latency-insight(0.5)"
+   ],
+   "desktop": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+   },
+   "desktopFailed": [
+    "uses-long-cache-ttl(0.5)",
+    "unminified-css(0.5)",
+    "unused-css-rules(0.5)",
+    "uses-text-compression(0)",
+    "cache-insight(0.5)",
+    "document-latency-insight(0.5)"
+   ]
+  },
+  {
+   "path": "/no-such-page",
+   "mobile": {
+    "performance": 0,
+    "accessibility": 0,
+    "best-practices": 0,
+    "seo": 0
+   },
+   "mobileFailed": [],
+   "desktop": {
+    "performance": 0,
+    "accessibility": 0,
+    "best-practices": 0,
+    "seo": 0
+   },
+   "desktopFailed": []
+  }
+ ],
+ "axe": [
+  {
+   "path": "/",
+   "scheme": "light",
+   "violations": []
+  },
+  {
+   "path": "/",
+   "scheme": "dark",
+   "violations": []
+  },
+  {
+   "path": "/for-bookkeepers",
+   "scheme": "light",
+   "violations": []
+  },
+  {
+   "path": "/for-bookkeepers",
+   "scheme": "dark",
+   "violations": []
+  },
+  {
+   "path": "/for-controllers",
+   "scheme": "light",
+   "violations": []
+  },
+  {
+   "path": "/for-controllers",
+   "scheme": "dark",
+   "violations": []
+  },
+  {
+   "path": "/how-it-works",
+   "scheme": "light",
+   "violations": []
+  },
+  {
+   "path": "/how-it-works",
+   "scheme": "dark",
+   "violations": []
+  },
+  {
+   "path": "/privacy",
+   "scheme": "light",
+   "violations": []
+  },
+  {
+   "path": "/privacy",
+   "scheme": "dark",
+   "violations": []
+  },
+  {
+   "path": "/quickbooks-online",
+   "scheme": "light",
+   "violations": []
+  },
+  {
+   "path": "/quickbooks-online",
+   "scheme": "dark",
+   "violations": []
+  },
+  {
+   "path": "/resources/",
+   "scheme": "light",
+   "violations": []
+  },
+  {
+   "path": "/resources/",
+   "scheme": "dark",
+   "violations": []
+  },
+  {
+   "path": "/resources/audit-ready-books",
+   "scheme": "light",
+   "violations": []
+  },
+  {
+   "path": "/resources/audit-ready-books",
+   "scheme": "dark",
+   "violations": []
+  },
+  {
+   "path": "/resources/month-end-close-checklist",
+   "scheme": "light",
+   "violations": []
+  },
+  {
+   "path": "/resources/month-end-close-checklist",
+   "scheme": "dark",
+   "violations": []
+  },
+  {
+   "path": "/resources/quickbooks-duplicate-transactions",
+   "scheme": "light",
+   "violations": []
+  },
+  {
+   "path": "/resources/quickbooks-duplicate-transactions",
+   "scheme": "dark",
+   "violations": []
+  },
+  {
+   "path": "/resources/trial-balance-vs-general-ledger",
+   "scheme": "light",
+   "violations": []
+  },
+  {
+   "path": "/resources/trial-balance-vs-general-ledger",
+   "scheme": "dark",
+   "violations": []
+  },
+  {
+   "path": "/security",
+   "scheme": "light",
+   "violations": []
+  },
+  {
+   "path": "/security",
+   "scheme": "dark",
+   "violations": []
+  },
+  {
+   "path": "/terms",
+   "scheme": "light",
+   "violations": []
+  },
+  {
+   "path": "/terms",
+   "scheme": "dark",
+   "violations": []
+  },
+  {
+   "path": "/no-such-page",
+   "scheme": "light",
+   "violations": []
+  },
+  {
+   "path": "/no-such-page",
+   "scheme": "dark",
+   "violations": []
+  }
+ ]
+}
