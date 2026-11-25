@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Audit-ready books: 10 things auditors and lenders ask for | Cerdify</title>
+<meta name="description" content="The supporting documentation auditors, lenders and buyers ask for first, what each one should show, and how to keep it ready every month instead of at year end.">
+<link rel="canonical" href="https://cerdify.com/resources/audit-ready-books">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F5F7FA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101418" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Cerdify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Audit-ready books: 10 things auditors and lenders ask for | Cerdify">
+<meta property="og:description" content="The supporting documentation auditors, lenders and buyers ask for first, what each one should show, and how to keep it ready every month instead of at year end.">
+<meta property="og:url" content="https://cerdify.com/resources/audit-ready-books">
+<meta property="og:image" content="https://cerdify.com/assets/og-cerdify.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Cerdify: Know what needs attention before you close the books. A close finding on synthetic data: depreciation not recorded, $224.92.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Audit-ready books: 10 things auditors and lenders ask for | Cerdify">
+<meta name="twitter:description" content="The supporting documentation auditors, lenders and buyers ask for first, what each one should show, and how to keep it ready every month instead of at year end.">
+<meta name="twitter:image" content="https://cerdify.com/assets/og-cerdify.png">
+<meta name="twitter:image:alt" content="Cerdify: Know what needs attention before you close the books. A close finding on synthetic data: depreciation not recorded, $224.92.">
+<link rel="preload" href="/fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* IBM Plex, self-hosted (SIL Open Font License, fonts/OFL.txt). No third-party requests. */
+  @font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(/fonts/ibm-plex-sans-latin.woff2) format('woff2'); }
+  @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url(/fonts/ibm-plex-mono-500-latin.woff2) format('woff2'); }
+  :root {
+    --bg: hsl(216 33% 97%);
+    --fg: hsl(216 29% 10%);
+    --muted: hsl(213 16% 35%);
+    --card: hsl(0 0% 100%);
+    --border: hsl(212 24% 89%);
+    --soft: hsl(214 26% 95%);
+    --primary: hsl(215 76% 50%);
+    --primary-fg: hsl(0 0% 100%);
+    --accent: hsl(216 91% 96%);
+    --accent-fg: hsl(216 88% 37%);
+    --mark: #16A34A;
+    --warn-bg: hsl(38 92% 95%);
+    --warn-fg: hsl(30 80% 28%);
+    --ok-bg: hsl(142 60% 94%);
+    --ok-fg: hsl(142 64% 24%);
+    --shadow: 0 1px 2px hsl(216 30% 20% / .06), 0 8px 24px hsl(216 30% 20% / .06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: hsl(213 23% 8%);
+      --fg: hsl(215 32% 93%);
+      --muted: hsl(215 16% 69%);
+      --card: hsl(214 23% 12%);
+      --border: hsl(214 21% 19%);
+      --soft: hsl(215 23% 15%);
+      --primary: hsl(213 100% 65%);
+      --primary-fg: hsl(214 66% 7%);
+      --accent: hsl(215 45% 14%);
+      --accent-fg: hsl(213 100% 77%);
+      --warn-bg: hsl(35 50% 14%);
+      --warn-fg: hsl(38 90% 72%);
+      --ok-bg: hsl(142 35% 13%);
+      --ok-fg: hsl(142 60% 70%);
+      --shadow: 0 1px 2px #0006, 0 8px 24px #0005;
+    }
+  }
+  * { box-sizing: border-box; }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+  section, #top { scroll-margin-top: 80px; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 17px; line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent-fg); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  .skip { position: absolute; left: -999px; top: 8px; background: var(--card); padding: 8px 12px; border-radius: 8px; z-index: 10; }
+  .skip:focus { left: 8px; }
+  :focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; border-radius: 6px; }
+
+  /* Header */
+  header.site { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+  .bar { display: flex; align-items: center; gap: 24px; height: 64px; }
+  .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--fg); font-weight: 700; font-size: 19px; letter-spacing: -0.3px; }
+  .brand svg { width: 30px; height: 30px; flex: none; }
+  nav.links { display: flex; gap: 22px; margin-left: auto; }
+  nav.links a { color: var(--muted); text-decoration: none; font-size: 15px; font-weight: 500; }
+  nav.links a:hover { color: var(--fg); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 20px; border-radius: 10px; font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid transparent; white-space: nowrap; }
+  .btn-primary { background: var(--primary); color: var(--primary-fg); }
+  .btn-primary:hover { filter: brightness(1.07); }
+  .btn-ghost { background: var(--card); color: var(--fg); border-color: var(--border); }
+  .btn-ghost:hover { background: var(--soft); }
+  .bar .actions { display: flex; gap: 10px; align-items: center; }
+  nav.links a[aria-current="page"] { color: var(--fg); text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; text-decoration-color: var(--primary); }
+  @media (max-width: 1000px) { nav.links { gap: 16px; } }
+  @media (max-width: 900px) { nav.links { display: none; } .bar .actions { margin-left: auto; } }
+  @media (max-width: 480px) { .bar .actions .btn-ghost { display: none; } .bar .btn { padding: 0 16px; } }
+
+  /* Hero */
+  .hero { padding: 72px 0 56px; }
+  .hero-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
+  .eyebrow { display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--accent-fg); background: var(--accent); padding: 4px 10px; border-radius: 999px; }
+  h1 { font-size: clamp(36px, 5vw, 54px); line-height: 1.08; letter-spacing: -1.2px; margin: 18px 0 18px; }
+  .lead { font-size: 19px; color: var(--muted); max-width: 560px; margin: 0 0 28px; }
+  .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+  .fine { font-size: 14px; color: var(--muted); margin-top: 18px; }
+  @media (max-width: 920px) { .hero-grid { grid-template-columns: 1fr; gap: 40px; } .hero { padding-top: 48px; } }
+
+  /* Product illustration */
+  .shot { background: var(--card); border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow); overflow: hidden; }
+  .shot-top { display: flex; align-items: center; gap: 6px; padding: 10px 14px; border-bottom: 1px solid var(--border); background: var(--soft); }
+  .shot-top i { width: 10px; height: 10px; border-radius: 50%; background: var(--border); display: block; }
+  .shot-top span { margin-left: 8px; font-size: 12px; color: var(--muted); font-family: 'IBM Plex Mono', monospace; }
+  .shot-body { padding: 18px; display: grid; gap: 14px; }
+  .stages { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .stage { font-size: 12px; font-weight: 600; text-align: center; padding: 8px 4px; border-radius: 8px; background: var(--soft); color: var(--muted); }
+  .stage.done { background: var(--ok-bg); color: var(--ok-fg); }
+  .stage.now { background: var(--accent); color: var(--accent-fg); outline: 1.5px solid var(--primary); }
+  .finding { border: 1px solid var(--border); border-radius: 12px; padding: 14px; display: grid; gap: 8px; }
+  .finding-head { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+  .finding-head b { font-size: 15px; }
+  .amt { font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 15px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 999px; background: var(--soft); color: var(--muted); }
+  .tag.warn { background: var(--warn-bg); color: var(--warn-fg); }
+  .tag.ok { background: var(--ok-bg); color: var(--ok-fg); }
+  .finding p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.5; }
+  .checks { display: grid; gap: 6px; font-size: 13px; }
+  .checks div { display: flex; justify-content: space-between; gap: 10px; padding: 6px 10px; border-radius: 8px; background: var(--soft); }
+  .checks em { font-style: normal; font-weight: 600; }
+  .caption { font-size: 12px; color: var(--muted); text-align: center; margin-top: 10px; }
+
+  /* Sections */
+  section { padding: 72px 0; }
+  section.alt { background: var(--card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  h2 { font-size: clamp(28px, 3.4vw, 38px); line-height: 1.15; letter-spacing: -0.7px; margin: 0 0 14px; }
+  .intro { color: var(--muted); max-width: 680px; margin: 0 0 40px; font-size: 18px; }
+  .problem { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .qlist { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .qlist li { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; font-weight: 500; }
+  @media (max-width: 860px) { .problem { grid-template-columns: 1fr; gap: 24px; } }
+
+  .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; counter-reset: s; }
+  .step { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
+  .step .n { font-size: 12px; font-weight: 700; color: var(--accent-fg); text-transform: uppercase; letter-spacing: .05em; }
+  .step h3 { margin: 6px 0 8px; font-size: 19px; }
+  .step p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.55; }
+  @media (max-width: 1000px) { .steps { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .steps { grid-template-columns: 1fr; } }
+
+  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .feature { border: 1px solid var(--border); border-radius: 14px; padding: 24px; background: var(--bg); }
+  .feature h3 { margin: 0 0 8px; font-size: 19px; }
+  .feature p { margin: 0; color: var(--muted); font-size: 15px; }
+  .feature ul { margin: 10px 0 0; padding-left: 18px; color: var(--muted); font-size: 15px; }
+  @media (max-width: 900px) { .features { grid-template-columns: 1fr; } }
+
+  .who { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .who div { border-top: 3px solid var(--primary); padding-top: 14px; }
+  .who h3 { margin: 0 0 6px; font-size: 17px; }
+  .who p { margin: 0; color: var(--muted); font-size: 15px; }
+  @media (max-width: 900px) { .who { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .who { grid-template-columns: 1fr; } }
+
+  .scope { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .scope > div { border: 1px solid var(--border); border-radius: 14px; padding: 24px; background: var(--bg); }
+  .scope h3 { margin: 0 0 12px; font-size: 19px; }
+  .scope ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .scope li { display: flex; gap: 10px; color: var(--fg); font-size: 15px; }
+  .scope li::before { content: ""; flex: none; width: 18px; height: 18px; margin-top: 3px; border-radius: 50%; background: var(--ok-bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' stroke='%2316A34A' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat; }
+  .scope .not li::before { background: var(--soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 6l8 8M14 6l-8 8' stroke='%2364748b' stroke-width='2.2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") center/12px no-repeat; }
+  @media (max-width: 800px) { .scope { grid-template-columns: 1fr; } }
+
+  .faq { max-width: 820px; display: grid; gap: 10px; }
+  details { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 0 18px; }
+  summary { cursor: pointer; font-weight: 600; padding: 16px 0; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+" / ""; color: var(--muted); font-weight: 500; font-size: 20px; line-height: 1; }
+  details[open] summary::after { content: "–" / ""; }
+  details p { margin: 0 0 16px; color: var(--muted); font-size: 15px; }
+
+  .closing { text-align: center; }
+  .closing .intro { margin-left: auto; margin-right: auto; }
+  .closing .ctas { justify-content: center; }
+
+  /* Inner pages */
+  .page-hero { padding: 56px 0 40px; }
+  .page-hero h1 { font-size: clamp(32px, 4.4vw, 46px); line-height: 1.1; letter-spacing: -1px; margin: 14px 0 14px; max-width: 860px; }
+  .page-hero .lead { max-width: 700px; margin-bottom: 24px; }
+  .crumbs { font-size: 14px; color: var(--muted); margin: 0 0 14px; }
+  .crumbs ol { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; }
+  .crumbs li + li::before { content: "/"; margin-right: 6px; }
+  .crumbs a { color: var(--muted); }
+  section.tight { padding: 56px 0; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  @media (max-width: 860px) { .two { grid-template-columns: 1fr; gap: 28px; } }
+  .prose { max-width: 760px; }
+  .prose h2 { font-size: clamp(24px, 3vw, 30px); margin: 44px 0 10px; letter-spacing: -0.5px; }
+  .prose > h2:first-child { margin-top: 0; }
+  .prose h3 { font-size: 19px; margin: 28px 0 6px; }
+  .prose ul, .prose ol { padding-left: 22px; }
+  .prose li { margin: 4px 0; }
+  .prose li::marker { color: var(--muted); }
+  .muted { color: var(--muted); }
+  .note { border: 1px solid var(--border); border-left: 4px solid var(--primary); background: var(--card); border-radius: 12px; padding: 16px 20px; margin: 24px 0; }
+  .note p { margin: 0; }
+  .note p + p { margin-top: 8px; }
+  .note.warn { border-left-color: var(--warn-fg); }
+  .table-wrap { overflow-x: auto; margin: 16px 0; border: 1px solid var(--border); border-radius: 12px; background: var(--card); }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  caption { text-align: left; padding: 12px 14px 4px; font-weight: 600; font-size: 15px; }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tbody tr:last-child td { border-bottom: 0; }
+  th { color: var(--muted); font-weight: 600; }
+  td.num, th.num { text-align: right; font-family: 'IBM Plex Mono', monospace; font-weight: 500; white-space: nowrap; }
+  tfoot td { font-weight: 600; border-top: 2px solid var(--border); border-bottom: 0; }
+  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .cards.three { grid-template-columns: repeat(3, 1fr); }
+  .card { display: block; border: 1px solid var(--border); border-radius: 14px; padding: 24px; background: var(--bg); color: var(--fg); }
+  a.card { text-decoration: none; }
+  a.card:hover { border-color: var(--primary); }
+  .card h2, .card h3 { margin: 0 0 8px; font-size: 19px; letter-spacing: 0; line-height: 1.3; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .card .more { display: inline-block; margin-top: 12px; color: var(--accent-fg); font-weight: 600; font-size: 15px; }
+  @media (max-width: 860px) { .cards, .cards.three { grid-template-columns: 1fr; } }
+  .stage-detail { display: grid; grid-template-columns: 180px 1fr; gap: 24px; padding: 28px 0; border-top: 1px solid var(--border); }
+  .stage-detail:first-child { border-top: 0; padding-top: 0; }
+  .stage-detail .n { font-size: 12px; font-weight: 700; color: var(--accent-fg); text-transform: uppercase; letter-spacing: .05em; }
+  .stage-detail h2 { font-size: 24px; margin: 4px 0 0; letter-spacing: -0.3px; }
+  .stage-detail p { margin: 0 0 10px; }
+  .stage-detail ul { margin: 0; padding-left: 20px; color: var(--muted); }
+  @media (max-width: 700px) { .stage-detail { grid-template-columns: 1fr; gap: 8px; } }
+  .flow { list-style: none; counter-reset: f; padding: 0; margin: 0; display: grid; gap: 12px; }
+  .flow li { counter-increment: f; display: grid; grid-template-columns: 32px 1fr; gap: 14px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin: 0; }
+  .flow li::before { content: counter(f); display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: var(--accent-fg); font-weight: 700; font-size: 15px; }
+  .flow b { display: block; }
+  .flow span { color: var(--muted); font-size: 15px; }
+  .checklist h2 { margin-top: 36px; }
+  .checklist ul { list-style: none; padding: 0; display: grid; gap: 8px; margin: 12px 0 0; }
+  .checklist li { display: grid; grid-template-columns: 18px 1fr; gap: 12px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; margin: 0; }
+  .checklist li::before { content: ""; width: 14px; height: 14px; margin-top: 5px; border: 2px solid var(--muted); border-radius: 3px; }
+  .checklist li b { font-weight: 600; }
+  .checklist li span { display: block; color: var(--muted); font-size: 15px; }
+  .about { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .about dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 10px 20px; font-size: 16px; }
+  .about dt { color: var(--muted); }
+  .about dd { margin: 0; }
+  @media (max-width: 860px) { .about { grid-template-columns: 1fr; gap: 24px; } }
+
+  /* Legal pages */
+  .legal { max-width: 760px; margin: 0 auto; padding: 48px 24px 72px; line-height: 1.65; }
+  .legal h1 { font-size: clamp(30px, 4.4vw, 42px); line-height: 1.12; letter-spacing: -0.8px; margin: 0 0 8px; }
+  .legal .meta { color: var(--muted); font-size: 15px; margin: 0 0 32px; }
+  .legal h2 { font-size: 22px; line-height: 1.3; margin: 36px 0 8px; letter-spacing: 0; }
+  .legal ul { padding-left: 22px; }
+  .legal table { margin: 12px 0; }
+  .legal th, .legal td { padding: 8px 10px; }
+  .legal tbody tr:last-child td { border-bottom: 1px solid var(--border); }
+  @media (max-width: 560px) { .legal table, .legal thead, .legal tbody, .legal tr, .legal th, .legal td { display: block; } .legal thead { display: none; } .legal td, .legal tbody tr:last-child td { border: 0; padding: 2px 0; } .legal tr { border-bottom: 1px solid var(--border); padding: 8px 0; } }
+
+  /* Footer */
+  footer { border-top: 1px solid var(--border); padding: 40px 0; color: var(--muted); font-size: 14px; }
+  .foot-cols { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 28px; margin-bottom: 28px; }
+  .foot-cols h2 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--fg); margin: 0 0 10px; line-height: 1.4; }
+  .foot-cols ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
+  .foot-cols ul a { color: var(--muted); text-decoration: none; display: inline-block; padding: 2px 0; }
+  .foot-cols ul a:hover { color: var(--fg); text-decoration: underline; }
+  .foot-cols .brand { font-size: 17px; margin-bottom: 10px; }
+  .foot-cols .brand svg { width: 26px; height: 26px; }
+  .foot-cols p { margin: 0 0 6px; }
+  .foot-legal { border-top: 1px solid var(--border); padding-top: 20px; margin: 0; }
+  @media (max-width: 860px) { .foot-cols { grid-template-columns: 1fr 1fr; } .foot-cols > div:first-child { grid-column: 1 / -1; } }
+  @media (max-width: 420px) { .foot-cols { grid-template-columns: 1fr; } }
+
+  @media print {
+    header.site, footer, .skip, .no-print { display: none !important; }
+    body { background: #fff; color: #000; }
+    section, section.alt { padding: 12pt 0; background: none; border: 0; }
+  }
+  .visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+  .print-only { display: none; }
+  @media print {
+    @page { size: letter; margin: 14mm 14mm 16mm; }
+    body { font-size: 10.5pt; line-height: 1.45; }
+    .crumbs, .eyebrow { display: none; }
+    .print-only { display: block; color: #444; font-size: 9pt; }
+    .print-brand { display: flex; align-items: center; gap: 8px; color: #000; font-size: 15pt; font-weight: 700; margin: 0 0 10pt; }
+    .print-brand svg { width: 24px; height: 24px; }
+    .page-hero { padding: 0 0 6pt; }
+    .page-hero h1 { font-size: 22pt; margin: 0 0 4pt; }
+    .page-hero .lead { font-size: 11pt; color: #333; margin: 0; max-width: none; }
+    .wrap { padding: 0; max-width: none; }
+    .prose { max-width: none; }
+    .checklist h2 { font-size: 13pt; margin: 12pt 0 4pt; break-after: avoid; color: #000; }
+    .checklist ul { gap: 3pt; margin-top: 4pt; }
+    .checklist li { background: #fff; border: 0.5pt solid #bbb; border-radius: 4pt; padding: 4pt 8pt; break-inside: avoid; }
+    .checklist li::before { border-color: #333; margin-top: 3pt; }
+    .checklist li span { color: #444; font-size: 9.5pt; }
+    .checklist a { color: #000; text-decoration: none; }
+  }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://cerdify.com/#organization",
+   "name": "Cerdify Software, LLC",
+   "legalName": "Cerdify Software, LLC",
+   "alternateName": "Cerdify",
+   "url": "https://cerdify.com/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://cerdify.com/assets/cerdify-mark-512.png",
+    "width": 512,
+    "height": 512
+   },
+   "email": "support@cerdify.com",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Alpharetta",
+    "addressRegion": "GA",
+    "addressCountry": "US"
+   },
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "support@cerdify.com",
+    "availableLanguage": "en"
+   }
+  },
+  {
+   "@type": "Article",
+   "@id": "https://cerdify.com/resources/audit-ready-books#page",
+   "url": "https://cerdify.com/resources/audit-ready-books",
+   "description": "The supporting documentation auditors, lenders and buyers ask for first, what each one should show, and how to keep it ready every month instead of at year end.",
+   "publisher": {
+    "@id": "https://cerdify.com/#organization"
+   },
+   "headline": "10 things auditors and lenders ask for",
+   "datePublished": "2026-11-25",
+   "dateModified": "2026-11-25",
+   "author": {
+    "@id": "https://cerdify.com/#organization"
+   },
+   "image": "https://cerdify.com/assets/og-cerdify.png",
+   "mainEntityOfPage": "https://cerdify.com/resources/audit-ready-books"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://cerdify.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Resources",
+     "item": "https://cerdify.com/resources/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "What auditors and lenders ask for",
+     "item": "https://cerdify.com/resources/audit-ready-books"
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="Cerdify home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#16A34A"/><path d="M11.5 20.5L17.3 26.3L29 14.6" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      Cerdify
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="/how-it-works">How it works</a>
+      <a href="/quickbooks-online">QuickBooks Online</a>
+      <a href="/security">Security</a>
+      <a href="/resources/" aria-current="page">Resources</a>
+    </nav>
+    <div class="actions">
+      <a class="btn btn-ghost" href="https://app.cerdify.com/">Sign in</a>
+      <a class="btn btn-primary" href="mailto:support@cerdify.com?subject=Cerdify%20beta%20access%20request&amp;body=Hello%2C%0A%0AI'd%20like%20to%20join%20the%20Cerdify%20beta.%0A%0AName%3A%0ACompany%3A%0ARole%20(owner%2C%20bookkeeper%2C%20controller%2C%20adviser)%3A%0AAccounting%20system%20(for%20example%20QuickBooks%20Online)%3A%0AWhat%20I'd%20like%20to%20review%20first%3A%0A">Request beta access</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<div class="page-hero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/resources/">Resources</a></li><li><span aria-current="page">What auditors and lenders ask for</span></li></ol></nav>
+    <span class="eyebrow">Guide</span>
+    <h1>10 things auditors and lenders ask for</h1>
+    <p class="lead">Whether it's an audit, a loan renewal or a buyer's due diligence, the first requests are much the same. Here is what they usually are, and what a good answer looks like.</p>
+  </div>
+</div>
+
+<section class="alt tight" aria-label="Guide">
+  <div class="wrap prose">
+    <p>None of these is unusual, and most can be produced in minutes if they are kept each month. The trouble starts when they have to be rebuilt months later, from memory and email.</p>
+
+    <h2 id="tb-gl">1. A trial balance and general ledger that agree</h2>
+    <p>For the period under review, on the same accounting basis, with every account's ledger balance equal to the trial balance. Everything else is checked against these two reports. See <a href="/resources/trial-balance-vs-general-ledger">how to tie them out</a>.</p>
+
+    <h2 id="bank">2. Bank and credit card reconciliations</h2>
+    <p>For every account, a reconciliation that agrees the book balance to the statement's ending balance, with the statement itself and a list of uncleared items. Old uncleared items will be asked about, so explain them or clear them.</p>
+
+    <h2 id="ar">3. An accounts receivable aging</h2>
+    <p>One that totals to Accounts Receivable on the balance sheet, with old balances explained and a view on what will not be collected.</p>
+
+    <h2 id="ap">4. An accounts payable aging, and the bills that came after</h2>
+    <p>The aging should total to Accounts Payable. Expect questions about bills received after the period end: any that relate to the period should already be in it.</p>
+
+    <h2 id="fixed-assets">5. A fixed-asset register</h2>
+    <p>Each asset's cost, in-service date, method and life, with accumulated depreciation and the period's charge agreeing to the ledger. Invoices for the larger additions, and a note of anything sold or scrapped.</p>
+
+    <h2 id="debt">6. Loan statements and a debt schedule</h2>
+    <p>Each loan's balance agreed to the lender's statement, payments split between principal and interest, and accrued interest recorded. Lenders will also check any covenants against the numbers.</p>
+
+    <h2 id="support">7. Support for material transactions</h2>
+    <p>Invoices, contracts, receipts and agreements for transactions above a materiality threshold. The document should be the right kind, cover the recorded amount and match the date, the vendor or customer and the account.</p>
+
+    <h2 id="payroll">8. Payroll reports that agree to the books</h2>
+    <p>The payroll provider's reports for the period, agreed to payroll expense and to the payroll liability accounts, with quarterly and annual filings available.</p>
+
+    <h2 id="accruals">9. Schedules for accruals and prepaid expenses</h2>
+    <p>For each accrual and prepaid balance, the calculation behind it and the document it rests on: the contract, the invoice or the policy. A balance with no schedule is a balance nobody can explain.</p>
+
+    <h2 id="journals">10. A list of journal entries, with who approved them</h2>
+    <p>Manual journal entries get the closest look, especially large, round-number or period-end entries. Each one should have an explanation, support and a record of who approved it and when.</p>
+
+    <h2 id="monthly">Keep it ready every month</h2>
+    <p>The cheapest way to have all ten is to produce them as part of each month-end close rather than at year end. The <a href="/resources/month-end-close-checklist">month-end close checklist</a> covers each of them.</p>
+    <p>Expect follow-up questions too, most often about large movements from the prior period. A one-line explanation for each, written at close, saves a long search later.</p>
+
+    <div class="note">
+      <p><strong>Where Cerdify fits:</strong> Cerdify helps you prepare. It ties the trial balance to the ledger, lists the material transactions that need support and tracks the evidence for each, runs period-close checks, and keeps a record of who reviewed and approved what. It does not perform an audit or give an opinion on your books. <a href="/how-it-works">See how it works</a>.</p>
+    </div>
+    <p class="muted">General guidance, not accounting, audit or legal advice. What an auditor or lender asks for depends on the engagement and the agreement.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <a class="brand" href="/" aria-label="Cerdify home"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#16A34A"/><path d="M11.5 20.5L17.3 26.3L29 14.6" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg> Cerdify</a>
+        <p>Month-end close review for QuickBooks Online.</p>
+        <p>The beta is free and by invitation. <a href="mailto:support@cerdify.com?subject=Cerdify%20beta%20access%20request&amp;body=Hello%2C%0A%0AI'd%20like%20to%20join%20the%20Cerdify%20beta.%0A%0AName%3A%0ACompany%3A%0ARole%20(owner%2C%20bookkeeper%2C%20controller%2C%20adviser)%3A%0AAccounting%20system%20(for%20example%20QuickBooks%20Online)%3A%0AWhat%20I'd%20like%20to%20review%20first%3A%0A">Request beta access</a>.</p>
+      </div>
+      <nav aria-labelledby="foot-product">
+        <h2 id="foot-product">Product</h2>
+        <ul>
+          <li><a href="/how-it-works">How it works</a></li>
+          <li><a href="/quickbooks-online">QuickBooks Online</a></li>
+          <li><a href="/for-bookkeepers">For bookkeepers</a></li>
+          <li><a href="/for-controllers">For controllers</a></li>
+          <li><a href="/security">Security</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="foot-resources">
+        <h2 id="foot-resources">Resources</h2>
+        <ul>
+          <li><a href="/resources/month-end-close-checklist">Month-end close checklist</a></li>
+          <li><a href="/resources/audit-ready-books">What auditors and lenders ask for</a></li>
+          <li><a href="/resources/trial-balance-vs-general-ledger">Trial balance vs general ledger</a></li>
+          <li><a href="/resources/quickbooks-duplicate-transactions">Duplicate transactions in QuickBooks</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="foot-company">
+        <h2 id="foot-company">Company</h2>
+        <ul>
+          <li><a href="/#about">About</a></li>
+          <li><a href="mailto:support@cerdify.com">support@cerdify.com</a></li>
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/terms">Terms</a></li>
+          <li><a href="https://app.cerdify.com/">Sign in</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="foot-legal">© 2026 Cerdify Software, LLC. Cerdify is software. It does not provide audit, review, compilation, assurance, tax or legal services.</p>
+  </div>
+</footer>
+</body>
+</html>

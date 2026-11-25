@@ -1,0 +1,67 @@
+<!--page
+{
+ "title": "Security and data handling | Cerdify",
+ "description": "How Cerdify holds your accounting data, what it can and can't change in QuickBooks Online, the no-tracking rule, and what has not been independently assessed yet.",
+ "nav": "security",
+ "crumbs": [["Home", "/"], ["Security", "/security"]],
+ "modified": "2026-11-25"
+}
+-->
+<div class="page-hero">
+  <div class="wrap">
+    {{crumbs}}
+    <span class="eyebrow">Security</span>
+    <h1>How Cerdify handles your books.</h1>
+    <p class="lead">This page describes what is actually in place today, and what isn't yet. If anything here is unclear, or you need more detail for a security review, write to <a href="mailto:{{email}}">{{email}}</a>.</p>
+  </div>
+</div>
+
+<section class="alt tight" aria-labelledby="sec-status-h">
+  <div class="wrap prose">
+    <h2 id="sec-status-h">Independent assessment: not yet</h2>
+    <div class="note warn">
+      <p>Cerdify has not yet had an independent security assessment or penetration test, and it does not hold a security certification such as SOC 2. We will say so here until that changes, and update this page when it does.</p>
+    </div>
+    <p>What follows is how the service is built and run today, during the beta.</p>
+  </div>
+</section>
+
+<section aria-labelledby="sec-data-h">
+  <div class="wrap prose">
+    <h2 id="sec-data-h">Where your data is held</h2>
+    <ul>
+      <li><strong>Application, database and files:</strong> hosted by Replit, running on Google Cloud.</li>
+      <li><strong>Sign-in and account security:</strong> handled by Clerk. Cerdify does not store your password.</li>
+      <li><strong>Encryption:</strong> data is encrypted in transit and at rest.</li>
+      <li><strong>Separation between customers:</strong> each customer can reach only their own projects.</li>
+      <li><strong>Backups:</strong> a daily encrypted copy is kept in a separate Google Cloud storage bucket in the United States, under a retention policy that stops backups being deleted or overwritten before the retention period ends. Backups are used only to recover from failures.</li>
+    </ul>
+    <p>The full list of service providers, and how long data is kept, is in the <a href="/privacy">Privacy Notice</a>.</p>
+
+    <h2 id="sec-qbo-h">What Cerdify can and can't change in QuickBooks Online</h2>
+    <p>The QuickBooks Online connection uses Intuit's own sign-in, and Cerdify never sees your QuickBooks password. Intuit issues an access token, which Cerdify stores encrypted.</p>
+    <p>QuickBooks grants apps a single accounting permission that covers reading and writing. Cerdify uses it to:</p>
+    <ul>
+      <li>read company information, the chart of accounts, transactions and standard reports for the periods you choose;</li>
+      <li>create new journal entries that a reviewer in your organization has approved, and read each one back to confirm the date, document number, accounts and amounts match.</li>
+    </ul>
+    <p>Cerdify does not edit or delete existing transactions, and it will not post an entry dated in a period you have closed in QuickBooks. When you disconnect, Cerdify deletes the stored credentials and revokes them with Intuit.</p>
+
+    <h2 id="sec-approval-h">Nothing changes without a person</h2>
+    <p>Proposed corrections are only proposals. A person approves each one before it is posted, and the approval keeps who made it and when. Review decisions are kept with the history of the review, so earlier versions remain visible.</p>
+
+    <h2 id="sec-track-h">No tracking</h2>
+    <p>The Cerdify app and this website run no advertising, analytics or tracking scripts, and set no tracking cookies. The website loads nothing from other companies' servers: its fonts are hosted here. The only cookies in the app are the ones needed to keep you signed in and to route requests, as listed in the <a href="/privacy">Privacy Notice</a>.</p>
+    <p>We do not sell your data, use it for advertising, or use your accounting records to train AI models. An optional AI feature that explains results is switched off. Before it is turned on, the Privacy Notice will say what it sends and to whom.</p>
+
+    <h2 id="sec-app-h">In the application</h2>
+    <ul>
+      <li>The application sends browser security headers that stop it being framed by other sites, stop content-type guessing and withhold the referring address.</li>
+      <li>Responses that can contain financial data are marked not to be cached.</li>
+      <li>Logs are written so that session cookies and sign-in tokens are left out.</li>
+    </ul>
+
+    <h2 id="sec-report-h">Reporting a security issue</h2>
+    <p>If you find a security problem, please report it privately to <a href="mailto:{{email}}">{{email}}</a> with enough detail for us to reproduce it. Please don't test against other customers' data. We will confirm we received the report and tell you what we do about it.</p>
+  </div>
+</section>

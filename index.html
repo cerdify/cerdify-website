@@ -3,14 +3,34 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cerdify — Know what needs attention before you close the books</title>
+<title>Cerdify: month-end close review for QuickBooks Online</title>
 <meta name="description" content="Cerdify brings your trial balance, general ledger and supporting documents into one review workflow, so missing evidence and open questions are visible before outside review.">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://cerdify.com/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F5F7FA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101418" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cerdify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Cerdify — Know what needs attention before you close the books">
+<meta property="og:description" content="Cerdify brings your trial balance, general ledger and supporting documents into one review workflow, so missing evidence and open questions are visible before outside review.">
+<meta property="og:url" content="https://cerdify.com/">
+<meta property="og:image" content="https://cerdify.com/assets/og-cerdify.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Cerdify: Know what needs attention before you close the books. A close finding on synthetic data: depreciation not recorded, $224.92.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cerdify — Know what needs attention before you close the books">
+<meta name="twitter:description" content="Cerdify brings your trial balance, general ledger and supporting documents into one review workflow, so missing evidence and open questions are visible before outside review.">
+<meta name="twitter:image" content="https://cerdify.com/assets/og-cerdify.png">
+<meta name="twitter:image:alt" content="Cerdify: Know what needs attention before you close the books. A close finding on synthetic data: depreciation not recorded, $224.92.">
+<link rel="preload" href="/fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-  /* IBM Plex, self-hosted (SIL Open Font License, fonts/OFL.txt). No third-party requests. */
-  @font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/ibm-plex-sans-latin.woff2) format('woff2'); }
-  @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url(fonts/ibm-plex-mono-500-latin.woff2) format('woff2'); }
+/* IBM Plex, self-hosted (SIL Open Font License, fonts/OFL.txt). No third-party requests. */
+  @font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(/fonts/ibm-plex-sans-latin.woff2) format('woff2'); }
+  @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url(/fonts/ibm-plex-mono-500-latin.woff2) format('woff2'); }
   :root {
     --bg: hsl(216 33% 97%);
     --fg: hsl(216 29% 10%);
@@ -75,7 +95,11 @@
   .btn-primary:hover { filter: brightness(1.07); }
   .btn-ghost { background: var(--card); color: var(--fg); border-color: var(--border); }
   .btn-ghost:hover { background: var(--soft); }
-  @media (max-width: 860px) { nav.links { display: none; } .bar .btn { margin-left: auto; } }
+  .bar .actions { display: flex; gap: 10px; align-items: center; }
+  nav.links a[aria-current="page"] { color: var(--fg); text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; text-decoration-color: var(--primary); }
+  @media (max-width: 1000px) { nav.links { gap: 16px; } }
+  @media (max-width: 900px) { nav.links { display: none; } .bar .actions { margin-left: auto; } }
+  @media (max-width: 480px) { .bar .actions .btn-ghost { display: none; } .bar .btn { padding: 0 16px; } }
 
   /* Hero */
   .hero { padding: 72px 0 56px; }
@@ -164,41 +188,301 @@
   .closing .intro { margin-left: auto; margin-right: auto; }
   .closing .ctas { justify-content: center; }
 
-  footer { border-top: 1px solid var(--border); padding: 32px 0 40px; color: var(--muted); font-size: 14px; }
-  .foot { display: flex; flex-wrap: wrap; gap: 16px 32px; justify-content: space-between; align-items: center; }
-  .foot p { margin: 0; max-width: 640px; }
+  /* Inner pages */
+  .page-hero { padding: 56px 0 40px; }
+  .page-hero h1 { font-size: clamp(32px, 4.4vw, 46px); line-height: 1.1; letter-spacing: -1px; margin: 14px 0 14px; max-width: 860px; }
+  .page-hero .lead { max-width: 700px; margin-bottom: 24px; }
+  .crumbs { font-size: 14px; color: var(--muted); margin: 0 0 14px; }
+  .crumbs ol { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; }
+  .crumbs li + li::before { content: "/"; margin-right: 6px; }
+  .crumbs a { color: var(--muted); }
+  section.tight { padding: 56px 0; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  @media (max-width: 860px) { .two { grid-template-columns: 1fr; gap: 28px; } }
+  .prose { max-width: 760px; }
+  .prose h2 { font-size: clamp(24px, 3vw, 30px); margin: 44px 0 10px; letter-spacing: -0.5px; }
+  .prose > h2:first-child { margin-top: 0; }
+  .prose h3 { font-size: 19px; margin: 28px 0 6px; }
+  .prose ul, .prose ol { padding-left: 22px; }
+  .prose li { margin: 4px 0; }
+  .prose li::marker { color: var(--muted); }
+  .muted { color: var(--muted); }
+  .note { border: 1px solid var(--border); border-left: 4px solid var(--primary); background: var(--card); border-radius: 12px; padding: 16px 20px; margin: 24px 0; }
+  .note p { margin: 0; }
+  .note p + p { margin-top: 8px; }
+  .note.warn { border-left-color: var(--warn-fg); }
+  .table-wrap { overflow-x: auto; margin: 16px 0; border: 1px solid var(--border); border-radius: 12px; background: var(--card); }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  caption { text-align: left; padding: 12px 14px 4px; font-weight: 600; font-size: 15px; }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tbody tr:last-child td { border-bottom: 0; }
+  th { color: var(--muted); font-weight: 600; }
+  td.num, th.num { text-align: right; font-family: 'IBM Plex Mono', monospace; font-weight: 500; white-space: nowrap; }
+  tfoot td { font-weight: 600; border-top: 2px solid var(--border); border-bottom: 0; }
+  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .cards.three { grid-template-columns: repeat(3, 1fr); }
+  .card { display: block; border: 1px solid var(--border); border-radius: 14px; padding: 24px; background: var(--bg); color: var(--fg); }
+  a.card { text-decoration: none; }
+  a.card:hover { border-color: var(--primary); }
+  .card h2, .card h3 { margin: 0 0 8px; font-size: 19px; letter-spacing: 0; line-height: 1.3; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .card .more { display: inline-block; margin-top: 12px; color: var(--accent-fg); font-weight: 600; font-size: 15px; }
+  @media (max-width: 860px) { .cards, .cards.three { grid-template-columns: 1fr; } }
+  .stage-detail { display: grid; grid-template-columns: 180px 1fr; gap: 24px; padding: 28px 0; border-top: 1px solid var(--border); }
+  .stage-detail:first-child { border-top: 0; padding-top: 0; }
+  .stage-detail .n { font-size: 12px; font-weight: 700; color: var(--accent-fg); text-transform: uppercase; letter-spacing: .05em; }
+  .stage-detail h2 { font-size: 24px; margin: 4px 0 0; letter-spacing: -0.3px; }
+  .stage-detail p { margin: 0 0 10px; }
+  .stage-detail ul { margin: 0; padding-left: 20px; color: var(--muted); }
+  @media (max-width: 700px) { .stage-detail { grid-template-columns: 1fr; gap: 8px; } }
+  .flow { list-style: none; counter-reset: f; padding: 0; margin: 0; display: grid; gap: 12px; }
+  .flow li { counter-increment: f; display: grid; grid-template-columns: 32px 1fr; gap: 14px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin: 0; }
+  .flow li::before { content: counter(f); display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: var(--accent-fg); font-weight: 700; font-size: 15px; }
+  .flow b { display: block; }
+  .flow span { color: var(--muted); font-size: 15px; }
+  .checklist h2 { margin-top: 36px; }
+  .checklist ul { list-style: none; padding: 0; display: grid; gap: 8px; margin: 12px 0 0; }
+  .checklist li { display: grid; grid-template-columns: 18px 1fr; gap: 12px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; margin: 0; }
+  .checklist li::before { content: ""; width: 14px; height: 14px; margin-top: 5px; border: 2px solid var(--muted); border-radius: 3px; }
+  .checklist li b { font-weight: 600; }
+  .checklist li span { display: block; color: var(--muted); font-size: 15px; }
+  .about { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .about dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 10px 20px; font-size: 16px; }
+  .about dt { color: var(--muted); }
+  .about dd { margin: 0; }
+  @media (max-width: 860px) { .about { grid-template-columns: 1fr; gap: 24px; } }
+
+  /* Legal pages */
+  .legal { max-width: 760px; margin: 0 auto; padding: 48px 24px 72px; line-height: 1.65; }
+  .legal h1 { font-size: clamp(30px, 4.4vw, 42px); line-height: 1.12; letter-spacing: -0.8px; margin: 0 0 8px; }
+  .legal .meta { color: var(--muted); font-size: 15px; margin: 0 0 32px; }
+  .legal h2 { font-size: 22px; line-height: 1.3; margin: 36px 0 8px; letter-spacing: 0; }
+  .legal ul { padding-left: 22px; }
+  .legal table { margin: 12px 0; }
+  .legal th, .legal td { padding: 8px 10px; }
+  .legal tbody tr:last-child td { border-bottom: 1px solid var(--border); }
+  @media (max-width: 560px) { .legal table, .legal thead, .legal tbody, .legal tr, .legal th, .legal td { display: block; } .legal thead { display: none; } .legal td, .legal tbody tr:last-child td { border: 0; padding: 2px 0; } .legal tr { border-bottom: 1px solid var(--border); padding: 8px 0; } }
+
+  /* Footer */
+  footer { border-top: 1px solid var(--border); padding: 40px 0; color: var(--muted); font-size: 14px; }
+  .foot-cols { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 28px; margin-bottom: 28px; }
+  .foot-cols h2 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--fg); margin: 0 0 10px; line-height: 1.4; }
+  .foot-cols ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
+  .foot-cols ul a { color: var(--muted); text-decoration: none; display: inline-block; padding: 2px 0; }
+  .foot-cols ul a:hover { color: var(--fg); text-decoration: underline; }
+  .foot-cols .brand { font-size: 17px; margin-bottom: 10px; }
+  .foot-cols .brand svg { width: 26px; height: 26px; }
+  .foot-cols p { margin: 0 0 6px; }
+  .foot-legal { border-top: 1px solid var(--border); padding-top: 20px; margin: 0; }
+  @media (max-width: 860px) { .foot-cols { grid-template-columns: 1fr 1fr; } .foot-cols > div:first-child { grid-column: 1 / -1; } }
+  @media (max-width: 420px) { .foot-cols { grid-template-columns: 1fr; } }
+
+  @media print {
+    header.site, footer, .skip, .no-print { display: none !important; }
+    body { background: #fff; color: #000; }
+    section, section.alt { padding: 12pt 0; background: none; border: 0; }
+  }
+  .visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+  .print-only { display: none; }
+  @media print {
+    @page { size: letter; margin: 14mm 14mm 16mm; }
+    body { font-size: 10.5pt; line-height: 1.45; }
+    .crumbs, .eyebrow { display: none; }
+    .print-only { display: block; color: #444; font-size: 9pt; }
+    .print-brand { display: flex; align-items: center; gap: 8px; color: #000; font-size: 15pt; font-weight: 700; margin: 0 0 10pt; }
+    .print-brand svg { width: 24px; height: 24px; }
+    .page-hero { padding: 0 0 6pt; }
+    .page-hero h1 { font-size: 22pt; margin: 0 0 4pt; }
+    .page-hero .lead { font-size: 11pt; color: #333; margin: 0; max-width: none; }
+    .wrap { padding: 0; max-width: none; }
+    .prose { max-width: none; }
+    .checklist h2 { font-size: 13pt; margin: 12pt 0 4pt; break-after: avoid; color: #000; }
+    .checklist ul { gap: 3pt; margin-top: 4pt; }
+    .checklist li { background: #fff; border: 0.5pt solid #bbb; border-radius: 4pt; padding: 4pt 8pt; break-inside: avoid; }
+    .checklist li::before { border-color: #333; margin-top: 3pt; }
+    .checklist li span { color: #444; font-size: 9.5pt; }
+    .checklist a { color: #000; text-decoration: none; }
+  }
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://cerdify.com/#organization",
+   "name": "Cerdify Software, LLC",
+   "legalName": "Cerdify Software, LLC",
+   "alternateName": "Cerdify",
+   "url": "https://cerdify.com/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://cerdify.com/assets/cerdify-mark-512.png",
+    "width": 512,
+    "height": 512
+   },
+   "email": "support@cerdify.com",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Alpharetta",
+    "addressRegion": "GA",
+    "addressCountry": "US"
+   },
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "support@cerdify.com",
+    "availableLanguage": "en"
+   }
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://cerdify.com/#website",
+   "url": "https://cerdify.com/",
+   "name": "Cerdify",
+   "publisher": {
+    "@id": "https://cerdify.com/#organization"
+   }
+  },
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://cerdify.com/#software",
+   "name": "Cerdify",
+   "url": "https://cerdify.com/",
+   "applicationCategory": "BusinessApplication",
+   "applicationSubCategory": "Accounting",
+   "operatingSystem": "Web browser",
+   "description": "Month-end close review software for QuickBooks Online. Prepare, Diagnose, Support, Close and Report, then post approved correcting entries to QuickBooks Online and confirm they match.",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free during the invitation-only beta"
+   },
+   "publisher": {
+    "@id": "https://cerdify.com/#organization"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://cerdify.com/#page",
+   "url": "https://cerdify.com/",
+   "name": "Cerdify: month-end close review for QuickBooks Online",
+   "description": "Cerdify brings your trial balance, general ledger and supporting documents into one review workflow, so missing evidence and open questions are visible before outside review.",
+   "isPartOf": {
+    "@id": "https://cerdify.com/#website"
+   },
+   "publisher": {
+    "@id": "https://cerdify.com/#organization"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://cerdify.com/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Is Cerdify an audit?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Cerdify is software that organizes a review of your books and the evidence behind them. It does not issue an audit opinion or provide assurance."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I need to connect QuickBooks Online?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. You can upload a trial balance and general ledger, or follow the guided QuickBooks Online export. You stay in control of the files you provide."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What files do I start with?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A trial balance and general ledger for the same company, period and accounting basis. Cerdify checks them before the project is created."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does a high score mean I'll pass an audit?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. A score reflects the data, evidence and reviews available at the time. It is not a guarantee, a certification or a substitute for an auditor's work."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can Cerdify post corrections to my books?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, with your approval. Cerdify proposes a correcting journal entry, a reviewer approves it, and Cerdify posts it to QuickBooks Online, then reads it back to confirm it matches. Nothing is posted without a person's approval. Direct posting is being enabled for beta customers, and more accounting systems will follow."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I join the beta?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The beta is small and by invitation, for U.S. companies and the people who keep their books. To ask for an invitation, email support@cerdify.com with your name, company and role, or use the Request beta access button."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What does the beta cost?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Nothing. The beta is free of charge unless a signed order form says otherwise. Pricing for after the beta has not been set yet, and beta users will hear about it before it applies to them."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How is my data protected?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Data is encrypted in transit and at rest, QuickBooks Online access tokens are stored encrypted, and each customer sees only their own projects. Cerdify has not yet had an independent security assessment. The security page explains what is in place and what is not."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
-
 <header class="site">
   <div class="wrap bar">
-    <a class="brand" href="#top" aria-label="Cerdify home">
+    <a class="brand" href="/" aria-label="Cerdify home">
       <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#16A34A"/><path d="M11.5 20.5L17.3 26.3L29 14.6" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
       Cerdify
     </a>
-    <nav class="links" aria-label="Page sections">
-      <a href="#how">How it works</a>
-      <a href="#evidence">Evidence</a>
-      <a href="#who">Who it's for</a>
-      <a href="#faq">FAQ</a>
+    <nav class="links" aria-label="Main">
+      <a href="/how-it-works">How it works</a>
+      <a href="/quickbooks-online">QuickBooks Online</a>
+      <a href="/security">Security</a>
+      <a href="/resources/">Resources</a>
     </nav>
-    <a class="btn btn-primary" href="https://app.cerdify.com/">Sign in</a>
+    <div class="actions">
+      <a class="btn btn-ghost" href="https://app.cerdify.com/">Sign in</a>
+      <a class="btn btn-primary" href="mailto:support@cerdify.com?subject=Cerdify%20beta%20access%20request&amp;body=Hello%2C%0A%0AI'd%20like%20to%20join%20the%20Cerdify%20beta.%0A%0AName%3A%0ACompany%3A%0ARole%20(owner%2C%20bookkeeper%2C%20controller%2C%20adviser)%3A%0AAccounting%20system%20(for%20example%20QuickBooks%20Online)%3A%0AWhat%20I'd%20like%20to%20review%20first%3A%0A">Request beta access</a>
+    </div>
   </div>
 </header>
 
 <main id="main">
-  <div id="top" class="hero">
+<div id="top" class="hero">
     <div class="wrap hero-grid">
       <div>
         <span class="eyebrow">Now in a small, invitation-only beta</span>
         <h1>Know what needs attention before you close the books.</h1>
         <p class="lead">Cerdify brings your trial balance, general ledger and supporting documents into one review workflow. See where evidence is missing, investigate exceptions, and keep a clear record of review decisions.</p>
         <div class="ctas">
-          <a class="btn btn-primary" href="https://app.cerdify.com/">Sign in</a>
-          <a class="btn btn-ghost" href="#how">See how it works</a>
+          <a class="btn btn-primary" href="mailto:support@cerdify.com?subject=Cerdify%20beta%20access%20request&amp;body=Hello%2C%0A%0AI'd%20like%20to%20join%20the%20Cerdify%20beta.%0A%0AName%3A%0ACompany%3A%0ARole%20(owner%2C%20bookkeeper%2C%20controller%2C%20adviser)%3A%0AAccounting%20system%20(for%20example%20QuickBooks%20Online)%3A%0AWhat%20I'd%20like%20to%20review%20first%3A%0A">Request beta access</a>
+          <a class="btn btn-ghost" href="/how-it-works">See how it works</a>
         </div>
+        <p class="fine"><strong>Beta: free.</strong> Already in the beta? <a href="https://app.cerdify.com/">Sign in</a>.</p>
         <p class="fine">Cerdify is software, not an audit. Results depend on the records you supply and the reviews you complete.</p>
       </div>
 
@@ -257,6 +541,7 @@
         <div class="step"><div class="n">Stage 4</div><h3>Close</h3><p>Period-close checks show what is supported, what is missing and what is unclear. Approved corrections post back to your books as journal entries.</p></div>
         <div class="step"><div class="n">Stage 5</div><h3>Report</h3><p>Export Excel and PDF reports that show the work performed, the open items and the limits of the review.</p></div>
       </div>
+      <p class="fine"><a href="/how-it-works">See each stage in detail</a> · <a href="/quickbooks-online">How it works with QuickBooks Online</a></p>
     </div>
   </section>
 
@@ -293,8 +578,8 @@
       <p class="intro">For the people who have to stand behind the numbers.</p>
       <div class="who">
         <div><h3>Business owners</h3><p>See what support is in place before a lender, investor, buyer or tax preparer asks.</p></div>
-        <div><h3>Bookkeepers</h3><p>Turn cleanup into an organized, explainable plan, and request the right support from clients.</p></div>
-        <div><h3>Controllers</h3><p>Prioritize material gaps, track review decisions and run a consistent evidence process every month.</p></div>
+        <div><h3><a href="/for-bookkeepers">Bookkeepers</a></h3><p>Turn cleanup into an organized, explainable plan, and request the right support from clients.</p></div>
+        <div><h3><a href="/for-controllers">Controllers</a></h3><p>Prioritize material gaps, track review decisions and run a consistent evidence process every month.</p></div>
         <div><h3>Accounting advisers</h3><p>Start client readiness conversations from a structured view, while keeping your professional judgment.</p></div>
       </div>
     </div>
@@ -340,26 +625,79 @@
         <details><summary>What files do I start with?</summary><p>A trial balance and general ledger for the same company, period and accounting basis. Cerdify checks them before the project is created.</p></details>
         <details><summary>Does a high score mean I'll pass an audit?</summary><p>No. A score reflects the data, evidence and reviews available at the time. It is not a guarantee, a certification or a substitute for an auditor's work.</p></details>
         <details><summary>Can Cerdify post corrections to my books?</summary><p>Yes, with your approval. Cerdify proposes a correcting journal entry, a reviewer approves it, and Cerdify posts it to QuickBooks Online, then reads it back to confirm it matches. Nothing is posted without a person's approval. Direct posting is being enabled for beta customers, and more accounting systems will follow.</p></details>
-        <details><summary>How do I join the beta?</summary><p>The beta is small and by invitation, for U.S. companies and the people who keep their books.</p></details>
+        <details><summary>How do I join the beta?</summary><p>The beta is small and by invitation, for U.S. companies and the people who keep their books. To ask for an invitation, email support@cerdify.com with your name, company and role, or use the Request beta access button.</p></details>
+        <details><summary>What does the beta cost?</summary><p>Nothing. The beta is free of charge unless a signed order form says otherwise. Pricing for after the beta has not been set yet, and beta users will hear about it before it applies to them.</p></details>
+        <details><summary>How is my data protected?</summary><p>Data is encrypted in transit and at rest, QuickBooks Online access tokens are stored encrypted, and each customer sees only their own projects. Cerdify has not yet had an independent security assessment. The security page explains what is in place and what is not.</p></details>
       </div>
     </div>
   </section>
 
-  <section class="alt closing" aria-labelledby="close-h">
+  <section id="about" class="alt" aria-labelledby="about-h">
+    <div class="wrap about">
+      <div>
+        <h2 id="about-h">About Cerdify</h2>
+        <p class="intro" style="margin-bottom:0">Cerdify is built by Cerdify Software, LLC, a small software company in Alpharetta, Georgia. We make review software for the people who close the books each month and have to stand behind the numbers.</p>
+      </div>
+      <dl>
+        <dt>Company</dt><dd>Cerdify Software, LLC</dd>
+        <dt>Location</dt><dd>Alpharetta, Georgia, United States</dd>
+        <dt>Contact</dt><dd><a href="mailto:support@cerdify.com">support@cerdify.com</a></dd>
+        <dt>Status</dt><dd>Invitation-only beta, free of charge</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="closing" aria-labelledby="close-h">
     <div class="wrap">
-      <h2 id="close-h">Already part of the beta?</h2>
-      <p class="intro">Sign in to pick up where you left off.</p>
-      <div class="ctas"><a class="btn btn-primary" href="https://app.cerdify.com/">Sign in to Cerdify</a></div>
+      <h2 id="close-h">Ready to review your next close?</h2>
+      <p class="intro">Ask for an invitation to the beta. Already part of it? Sign in to pick up where you left off.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="mailto:support@cerdify.com?subject=Cerdify%20beta%20access%20request&amp;body=Hello%2C%0A%0AI'd%20like%20to%20join%20the%20Cerdify%20beta.%0A%0AName%3A%0ACompany%3A%0ARole%20(owner%2C%20bookkeeper%2C%20controller%2C%20adviser)%3A%0AAccounting%20system%20(for%20example%20QuickBooks%20Online)%3A%0AWhat%20I'd%20like%20to%20review%20first%3A%0A">Request beta access</a>
+        <a class="btn btn-ghost" href="https://app.cerdify.com/">Sign in to Cerdify</a>
+      </div>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="wrap foot">
-    <p>© 2026 Cerdify. Cerdify is software. It does not provide audit, review, compilation, assurance, tax or legal services.</p>
-    <a href="/privacy">Privacy</a>
-    <a href="/terms">Terms</a>
-    <a href="https://app.cerdify.com/">Sign in</a>
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <a class="brand" href="/" aria-label="Cerdify home"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#16A34A"/><path d="M11.5 20.5L17.3 26.3L29 14.6" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg> Cerdify</a>
+        <p>Month-end close review for QuickBooks Online.</p>
+        <p>The beta is free and by invitation. <a href="mailto:support@cerdify.com?subject=Cerdify%20beta%20access%20request&amp;body=Hello%2C%0A%0AI'd%20like%20to%20join%20the%20Cerdify%20beta.%0A%0AName%3A%0ACompany%3A%0ARole%20(owner%2C%20bookkeeper%2C%20controller%2C%20adviser)%3A%0AAccounting%20system%20(for%20example%20QuickBooks%20Online)%3A%0AWhat%20I'd%20like%20to%20review%20first%3A%0A">Request beta access</a>.</p>
+      </div>
+      <nav aria-labelledby="foot-product">
+        <h2 id="foot-product">Product</h2>
+        <ul>
+          <li><a href="/how-it-works">How it works</a></li>
+          <li><a href="/quickbooks-online">QuickBooks Online</a></li>
+          <li><a href="/for-bookkeepers">For bookkeepers</a></li>
+          <li><a href="/for-controllers">For controllers</a></li>
+          <li><a href="/security">Security</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="foot-resources">
+        <h2 id="foot-resources">Resources</h2>
+        <ul>
+          <li><a href="/resources/month-end-close-checklist">Month-end close checklist</a></li>
+          <li><a href="/resources/audit-ready-books">What auditors and lenders ask for</a></li>
+          <li><a href="/resources/trial-balance-vs-general-ledger">Trial balance vs general ledger</a></li>
+          <li><a href="/resources/quickbooks-duplicate-transactions">Duplicate transactions in QuickBooks</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="foot-company">
+        <h2 id="foot-company">Company</h2>
+        <ul>
+          <li><a href="/#about">About</a></li>
+          <li><a href="mailto:support@cerdify.com">support@cerdify.com</a></li>
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/terms">Terms</a></li>
+          <li><a href="https://app.cerdify.com/">Sign in</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="foot-legal">© 2026 Cerdify Software, LLC. Cerdify is software. It does not provide audit, review, compilation, assurance, tax or legal services.</p>
   </div>
 </footer>
 </body>

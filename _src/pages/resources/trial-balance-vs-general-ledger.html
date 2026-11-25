@@ -1,0 +1,73 @@
+<!--page
+{
+ "title": "Trial balance vs general ledger: how to reconcile them | Cerdify",
+ "description": "What the trial balance and general ledger each show, why they should agree, and how to reconcile one to the other, with a worked tie-out example.",
+ "h1": "Trial balance vs general ledger: what each shows, and how to tie them out",
+ "nav": "resources",
+ "article": true,
+ "published": "2026-11-25",
+ "crumbs": [["Home", "/"], ["Resources", "/resources/"], ["Trial balance vs general ledger", "/resources/trial-balance-vs-general-ledger"]]
+}
+-->
+<div class="page-hero">
+  <div class="wrap">
+    {{crumbs}}
+    <span class="eyebrow">Guide</span>
+    <h1>Trial balance vs general ledger: what each shows, and how to tie them out</h1>
+    <p class="lead">The general ledger is every transaction. The trial balance is the ending balance of every account. If they don't agree, one of them isn't telling you what you think it is.</p>
+  </div>
+</div>
+
+<section class="alt tight" aria-label="Guide">
+  <div class="wrap prose">
+    <h2 id="definitions">Two views of the same books</h2>
+    <p><strong>The general ledger</strong> lists every transaction posted to every account for a period: date, type, reference, description and amount. For each account it starts from the opening balance, adds the period's debits and credits, and ends at a closing balance.</p>
+    <p><strong>The trial balance</strong> lists every account with a single balance as of one date, debits in one column and credits in the other. The two columns should total the same amount.</p>
+    <p>Because the trial balance is a summary of the ledger, every account's closing balance in the general ledger should equal its balance on the trial balance for the same date. That comparison is the tie-out.</p>
+
+    <h2 id="why">Why tie them out</h2>
+    <p>A trial balance that balances proves only that debits equal credits. It doesn't show that the ledger you're about to review is the same set of books. Tying out first catches the problems that make everything after it unreliable: reports run for different dates, on different accounting bases, or at different times while someone was still posting.</p>
+
+    <h2 id="example">A worked example</h2>
+    <p>A fictional company's October close. The trial balance was exported on 2 November and the general ledger on 4 November. Three accounts are shown.</p>
+    <div class="table-wrap" tabindex="0" role="region" aria-labelledby="tieout-cap">
+      <table>
+        <caption id="tieout-cap">Tie-out, October (synthetic data)</caption>
+        <thead>
+          <tr><th scope="col">Account</th><th scope="col" class="num">GL opening</th><th scope="col" class="num">Debits</th><th scope="col" class="num">Credits</th><th scope="col" class="num">GL closing</th><th scope="col" class="num">Trial balance</th><th scope="col" class="num">Difference</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1000 Checking</td><td class="num">48,210.55</td><td class="num">61,402.18</td><td class="num">57,930.40</td><td class="num">51,682.33</td><td class="num">51,682.33</td><td class="num">0.00</td></tr>
+          <tr><td>1200 Accounts receivable</td><td class="num">22,140.00</td><td class="num">38,615.50</td><td class="num">35,902.75</td><td class="num">24,852.75</td><td class="num">24,852.75</td><td class="num">0.00</td></tr>
+          <tr><td>1300 Inventory</td><td class="num">31,077.20</td><td class="num">18,450.00</td><td class="num">20,118.64</td><td class="num">29,408.56</td><td class="num">27,918.56</td><td class="num">1,490.00</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>GL closing is the opening balance plus debits minus credits. Checking and receivables agree. Inventory is $1,490.00 higher in the ledger than on the trial balance.</p>
+    <p>The cause: a supplier bill for $1,490.00, dated 31 October, was entered on 3 November. It is in the ledger, which was exported after it was entered, and missing from the trial balance, which was exported before. Accounts Payable shows the same $1,490.00 difference on the other side.</p>
+    <p>The fix is not a journal entry. It is to export both reports again, at the same time, so they describe the same books. Then the October review starts from numbers that agree.</p>
+
+    <h2 id="causes">Common reasons they don't agree</h2>
+    <ul>
+      <li><strong>Different dates.</strong> The ledger covers 1–31 October but the trial balance is as of 30 September, or a custom range was left on one report.</li>
+      <li><strong>Different accounting basis.</strong> One report is on the accrual basis and the other on the cash basis. In QuickBooks Online each report has its own setting.</li>
+      <li><strong>Exported at different times.</strong> Someone posted, edited or deleted a transaction between the two exports, as in the example.</li>
+      <li><strong>Filters.</strong> One report is filtered by class, location or account and the other isn't.</li>
+      <li><strong>Missing opening balances.</strong> The ledger export shows only the period's activity, so its closing balance excludes everything before the period.</li>
+      <li><strong>Accounts left out.</strong> Inactive accounts or accounts with no activity can drop out of one report and not the other.</li>
+    </ul>
+
+    <h2 id="qbo">Doing it in QuickBooks Online</h2>
+    <ol>
+      <li>Run the <strong>Trial Balance</strong> report as of the last day of the month, on the accounting basis you report on.</li>
+      <li>Run the <strong>General Ledger</strong> report for the month, on the same basis, with no filters.</li>
+      <li>Export both to Excel, one straight after the other.</li>
+      <li>For each account, compare the ledger's closing balance with the trial balance. Investigate any difference, starting with the largest.</li>
+      <li>Once everything agrees, keep both files with the month's close.</li>
+    </ol>
+    <div class="note">
+      <p><strong>How Cerdify helps:</strong> in the Prepare stage, Cerdify reconciles the trial balance to the general ledger account by account, before the project is created, and shows any difference instead of accepting files that don't agree. <a href="/how-it-works">See how it works</a>.</p>
+    </div>
+    <p class="muted">General guidance, not accounting advice. Report names and menus can differ between QuickBooks Online editions.</p>
+  </div>
+</section>

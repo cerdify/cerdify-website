@@ -1,0 +1,22 @@
+{
+  "origin": "https://cerdify.com",
+  "legalName": "Cerdify Software, LLC",
+  "email": "support@cerdify.com",
+  "copyrightYear": 2026,
+  "modified": "2026-11-25",
+  "betaRequest": {
+    "to": "support@cerdify.com",
+    "subject": "Cerdify beta access request",
+    "body": "Hello,\n\nI'd like to join the Cerdify beta.\n\nName:\nCompany:\nRole (owner, bookkeeper, controller, adviser):\nAccounting system (for example QuickBooks Online):\nWhat I'd like to review first:\n"
+  },
+  "ogImage": {
+    "path": "/assets/og-cerdify.png",
+    "width": 1200,
+    "height": 630,
+    "alt": "Cerdify: Know what needs attention before you close the books. A close finding on synthetic data: depreciation not recorded, $224.92."
+  },
+  "verification": {
+    "google-site-verification": "",
+    "msvalidate.01": ""
+  }
+}

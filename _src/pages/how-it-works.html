@@ -1,0 +1,117 @@
+<!--page
+{
+ "title": "How Cerdify works: a five-stage month-end close review",
+ "description": "Prepare, Diagnose, Support, Close and Report. How Cerdify turns a trial balance, general ledger and supporting documents into a reviewed month-end close.",
+ "nav": "how",
+ "software": true,
+ "crumbs": [["Home", "/"], ["How it works", "/how-it-works"]]
+}
+-->
+<div class="page-hero">
+  <div class="wrap">
+    {{crumbs}}
+    <span class="eyebrow">How it works</span>
+    <h1>A month-end close review in five stages.</h1>
+    <p class="lead">Every Cerdify project is one company and one period. It moves through the same five stages each month, so you always know what has been checked, what is still open and who decided what.</p>
+    <div class="ctas">
+      <a class="btn btn-primary" href="{{beta_mailto}}">Request beta access</a>
+      <a class="btn btn-ghost" href="/quickbooks-online">Using QuickBooks Online</a>
+    </div>
+  </div>
+</div>
+
+<section class="alt tight" aria-labelledby="stages-h">
+  <div class="wrap">
+    <h2 id="stages-h" class="visually-hidden">The five stages</h2>
+    <div>
+      <div class="stage-detail">
+        <div><div class="n">Stage 1</div><h2>Prepare</h2></div>
+        <div>
+          <p>Connect QuickBooks Online, follow the guided QuickBooks Online export, or upload a trial balance and general ledger. Cerdify checks the files before the project is created.</p>
+          <ul>
+            <li>The trial balance and general ledger must be for the same company, period and accounting basis.</li>
+            <li>Cerdify reconciles the trial balance to the ledger, account by account, and shows any difference.</li>
+            <li>Files that can't be read, or that don't agree, are explained rather than silently accepted.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="stage-detail">
+        <div><div class="n">Stage 2</div><h2>Diagnose</h2></div>
+        <div>
+          <p>Accounting diagnostics look for data-quality and reconciliation problems in the ledger, and explain in plain language why each one matters.</p>
+          <ul>
+            <li>Each result says what was compared, what was found and what would resolve it.</li>
+            <li>Missing information stays visible as missing. It is never treated as zero.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="stage-detail">
+        <div><div class="n">Stage 3</div><h2>Support</h2></div>
+        <div>
+          <p>Set a materiality threshold and Cerdify builds a versioned list of the transactions that need evidence. Match invoices, statements and agreements to them, and record what the reviewer concluded.</p>
+          <ul>
+            <li>For each transaction, four questions stay separate: is a document linked, is it the right kind of support, how much of the amount does it cover, and what did the reviewer decide.</li>
+            <li>When the threshold or the ledger changes, a new version of the list is made and the earlier one is kept.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="stage-detail">
+        <div><div class="n">Stage 4</div><h2>Close</h2></div>
+        <div>
+          <p>Period-close checks compare the ledger with the records behind it and show what is supported, what is missing and what is unclear. Where the evidence supports a correction, Cerdify proposes the journal entry.</p>
+          <ul>
+            <li>Checks cover areas such as depreciation and fixed-asset additions and disposals, accruals, unrecorded bills at period end, prepaid expenses, loan interest, payroll tax liabilities, bank and card balances, and entries that look duplicated.</li>
+            <li>A reviewer approves or rejects each proposed entry. Approved entries post to QuickBooks Online, and Cerdify reads each one back to confirm it matches what was approved.</li>
+            <li>Nothing is posted without a person's approval.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="stage-detail">
+        <div><div class="n">Stage 5</div><h2>Report</h2></div>
+        <div>
+          <p>Export Excel and PDF reports that show the work performed, the open items and the limits of the review, ready to share with a lender, an outside accountant or your own team.</p>
+          <ul>
+            <li>Reports say what was not reviewed as clearly as what was.</li>
+            <li>Review decisions keep who made them and when.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="example-h">
+  <div class="wrap two">
+    <div>
+      <h2 id="example-h">What a finding looks like</h2>
+      <p class="intro" style="margin-bottom:16px">A finding names the problem, the amount, the evidence it rests on and what happens next. This one comes from a fictional company's books.</p>
+      <p class="muted">The fixed-asset register shows a delivery truck placed in service on 1 August, with a monthly depreciation charge of $224.92. The August ledger has no depreciation entry for it. Cerdify flags it as a probable exception, links the register and the purchase invoice, and proposes the entry for a reviewer to approve.</p>
+    </div>
+    <figure style="margin:0">
+      <div class="shot" role="img" aria-label="Illustration of a Cerdify close finding, using synthetic data">
+        <div class="shot-top"><i></i><i></i><i></i><span>Close findings · August</span></div>
+        <div class="shot-body">
+          <div class="finding">
+            <div class="finding-head"><b>Depreciation not recorded</b><span class="amt">$224.92</span></div>
+            <div class="tags"><span class="tag warn">Probable exception</span><span class="tag">Fixed assets</span><span class="tag">Needs review</span></div>
+            <p>The fixed-asset register expects a monthly charge for a delivery truck placed in service on 1 August. The ledger shows none for the period.</p>
+          </div>
+          <div class="checks" aria-hidden="true">
+            <div><span>Debit 6150 Depreciation expense</span><em>$224.92</em></div>
+            <div><span>Credit 1590 Accumulated depreciation</span><em>$224.92</em></div>
+            <div><span>Proposed correction</span><em style="color:var(--warn-fg)">Awaiting approval</em></div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="caption">Illustration with synthetic data.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="alt" aria-labelledby="limits-h">
+  <div class="wrap prose">
+    <h2 id="limits-h">What the review does not do</h2>
+    <p>Cerdify organizes a review and keeps its reasoning visible. It does not perform an audit, review, compilation or assurance engagement, and it does not certify your books. A result marked Supported covers only the comparison it describes. Final judgments stay with the people responsible for the books.</p>
+    <p><a href="/security">How Cerdify handles your data</a> · <a href="/resources/month-end-close-checklist">Free month-end close checklist</a></p>
+  </div>
+</section>
