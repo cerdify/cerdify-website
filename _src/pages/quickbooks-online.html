@@ -1,0 +1,87 @@
+<!--page
+{
+ "title": "QuickBooks Online month-end close review | Cerdify",
+ "description": "Connect QuickBooks Online, review the close, approve corrections, and Cerdify posts them as journal entries and confirms each one matches what you approved.",
+ "nav": "qbo",
+ "software": true,
+ "crumbs": [["Home", "/"], ["QuickBooks Online", "/quickbooks-online"]]
+}
+-->
+<div class="page-hero">
+  <div class="wrap">
+    {{crumbs}}
+    <span class="eyebrow">QuickBooks Online</span>
+    <h1>A close review that starts and ends in QuickBooks Online.</h1>
+    <p class="lead">Cerdify reads the period from QuickBooks Online, checks the numbers and the evidence behind them, and posts the corrections a reviewer approves. Then it reads each entry back to confirm it landed as approved.</p>
+    <div class="ctas">
+      <a class="btn btn-primary" href="{{beta_mailto}}">Request beta access</a>
+      <a class="btn btn-ghost" href="/how-it-works">See the five stages</a>
+    </div>
+  </div>
+</div>
+
+<section class="alt tight" aria-labelledby="flow-h">
+  <div class="wrap two">
+    <div class="prose">
+      <h2 id="flow-h">Import, review, post, verify</h2>
+      <p>The connection uses Intuit's own sign-in. You choose the company and approve access in QuickBooks; Cerdify never sees your QuickBooks password.</p>
+      <p>Prefer not to connect? Follow the guided QuickBooks Online export and upload the trial balance and general ledger instead. The review is the same; you record the approved entries in QuickBooks yourself.</p>
+      <p>Some entries can't be posted by Cerdify yet, such as lines on Accounts Receivable, Accounts Payable or sales tax accounts. Cerdify says so on the entry, and you post those in QuickBooks yourself.</p>
+    </div>
+    <ol class="flow">
+      <li><div><b>Import</b><span>Cerdify reads your company information, chart of accounts, transactions and standard reports, such as the trial balance, for the period you choose.</span></div></li>
+      <li><div><b>Review</b><span>The trial balance is tied to the ledger, diagnostics run, material transactions get an evidence list, and period-close checks look for what is missing.</span></div></li>
+      <li><div><b>Approve</b><span>Where the evidence supports a correction, Cerdify proposes the journal entry. A reviewer in your organization approves or rejects it.</span></div></li>
+      <li><div><b>Post</b><span>Cerdify creates the approved journal entry in QuickBooks Online, exactly as approved.</span></div></li>
+      <li><div><b>Verify</b><span>Cerdify reads the entry back from QuickBooks and confirms the date, document number, accounts and amounts match the approval.</span></div></li>
+    </ol>
+  </div>
+</section>
+
+<section aria-labelledby="changes-h">
+  <div class="wrap">
+    <h2 id="changes-h">What Cerdify can and can't change in your books</h2>
+    <p class="intro">QuickBooks Online grants apps one accounting permission that covers reading and writing. Cerdify uses the writing part for one thing only.</p>
+    <div class="scope">
+      <div>
+        <h3>What Cerdify does in QuickBooks</h3>
+        <ul>
+          <li>Reads company information, accounts, transactions and reports for the periods you choose</li>
+          <li>Creates new journal entries that a reviewer approved</li>
+          <li>Reads each posted entry back to confirm it matches</li>
+        </ul>
+      </div>
+      <div class="not">
+        <h3>What Cerdify does not do</h3>
+        <ul>
+          <li>Post anything without a person's approval</li>
+          <li>Post into a period you have closed in QuickBooks</li>
+          <li>Edit or delete existing transactions</li>
+          <li>Change your chart of accounts, customers, vendors or settings</li>
+          <li>Keep connecting after you disconnect: the stored access is deleted and revoked with Intuit</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" aria-labelledby="qbo-faq-h">
+  <div class="wrap">
+    <h2 id="qbo-faq-h">QuickBooks Online questions</h2>
+    <div class="faq">
+      <details><summary>Which QuickBooks products does Cerdify work with?</summary><p>QuickBooks Online, for U.S. companies. QuickBooks Desktop is not supported. Xero and NetSuite are coming soon.</p></details>
+      <details><summary>Do I have to connect QuickBooks Online?</summary><p>No. You can follow the guided QuickBooks Online export and upload a trial balance and general ledger. Connecting saves the export step and lets Cerdify post approved entries for you.</p></details>
+      <details><summary>Will Cerdify change my books without asking?</summary><p>No. Cerdify only creates journal entries that a reviewer in your organization has approved, and it reads each one back to confirm it matches. It does not edit or delete existing transactions.</p></details>
+      <details><summary>Can I disconnect QuickBooks Online?</summary><p>Yes, at any time in Cerdify's settings. Cerdify then deletes the stored access credentials and revokes them with Intuit. Data already imported stays in your projects until you delete it.</p></details>
+      <details><summary>How are the QuickBooks access credentials stored?</summary><p>Encrypted. Intuit issues Cerdify an access token rather than a password, and Cerdify stores it encrypted.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="closing" aria-labelledby="qbo-close-h">
+  <div class="wrap">
+    <h2 id="qbo-close-h">Review your next QuickBooks Online close in Cerdify.</h2>
+    <p class="intro">The beta is free and by invitation, for U.S. companies on QuickBooks Online and the people who keep their books.</p>
+    <div class="ctas"><a class="btn btn-primary" href="{{beta_mailto}}">Request beta access</a></div>
+  </div>
+</section>
